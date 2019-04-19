@@ -53,7 +53,7 @@ endif()
 #-------------------------------------------------------------------------------
 # target spdlog
 #-------------------------------------------------------------------------------
-set(SPDLOG_PATH "./ECSengine/vendor/spdlog/include")
+set(SPDLOG_PATH "./engine/vendor/spdlog/include")
 include_directories(${SPDLOG_PATH})
 
 
