@@ -7,7 +7,7 @@ set(EXECUTABLE_NAME "portend")
 #-------------------------------------------------------------------------------
 # Compiler config
 #-------------------------------------------------------------------------------
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -28,6 +28,21 @@ set(ENGINE_PATH "./engine")
 file(GLOB ENGINE_SOURCE
     "${ENGINE_PATH}/include/engine/*.hpp"
     "${ENGINE_PATH}/src/*.cpp"
+
+    "${ENGINE_PATH}/include/engine/Application/*.hpp"
+    "${ENGINE_PATH}/src/Application/*.cpp"
+
+    "${ENGINE_PATH}/include/engine/Event/*.hpp"
+    "${ENGINE_PATH}/src/Event/*.cpp"
+
+    "${ENGINE_PATH}/include/engine/Window/*.hpp"
+    "${ENGINE_PATH}/src/Window/*.cpp"
+
+    "${ENGINE_PATH}/include/engine/ECSEngine/*.hpp"
+    "${ENGINE_PATH}/src/ECSEngine/*.cpp"
+
+    "${ENGINE_PATH}/include/engine/ECSEngine/utility/*.hpp"
+    "${ENGINE_PATH}/src/ECSEngine/utility/*.cpp"
     )
 if(ENGINE_SOURCE)
 	message("-- Found engine at ${ENGINE_PATH}")
@@ -55,6 +70,14 @@ endif()
 #-------------------------------------------------------------------------------
 set(SPDLOG_PATH "./engine/vendor/spdlog/include")
 include_directories(${SPDLOG_PATH})
+
+
+
+
+set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake_modules" ${CMAKE_MODULE_PATH})
+
+find_package(SFML 2 REQUIRED network audio graphics window system)
+include_directories(${SFML_INCLUDE_DIR})
 
 
 

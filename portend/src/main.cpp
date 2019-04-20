@@ -19,7 +19,7 @@ inline std::ostream& operator<<(std::ostream& os, const LogTest& test)
 
 
 
-int main(int , char **)
+int main()
 {
     engine::Logger::init();
 
