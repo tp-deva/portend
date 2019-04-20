@@ -2,6 +2,10 @@
 
 Quick intro goes here.
 
+### UML:
+
+[Link to DrawIO](https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Overview.drawio#Uhttps://drive.google.com/uc?id=1h0IjsUSCN8cbzLDQtgxxfdGkiox58QWa&export=download) 
+
 ### Code style:
 
 * File names with classes with *CamelCase* other *snake_case*
