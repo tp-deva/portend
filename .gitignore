@@ -1,5 +1,6 @@
 # IDEA ide project folder
 .idea/
 
-# Build folder
+# Build
+cmake-build-debug/
 build/
